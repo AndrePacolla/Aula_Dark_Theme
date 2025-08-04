@@ -14,12 +14,12 @@ export const ContextTheme = createContext< ContextThemeType| null>(null);
 export const ContextProvider = ({children}:{children: ReactNode}) => {
 
 
-const [theme, setTheme] =useState(
+const [theme, setTheme] = useState(
 
-    localStorage.getItem(STORAGE_KEY) || "light"
+    localStorage.getItem(STORAGE_KEY) || "ligth"
 );
 
-useEffect(() =>{
+useEffect(() => {
     localStorage.setItem(STORAGE_KEY, theme)
 },[theme])
 
