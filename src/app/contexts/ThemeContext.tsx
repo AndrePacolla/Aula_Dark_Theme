@@ -16,7 +16,7 @@ export const ContextProvider = ({children}:{children: ReactNode}) => {
 
 const [theme, setTheme] = useState(
 
-    localStorage.getItem(STORAGE_KEY) || "ligth"
+    localStorage.getItem(STORAGE_KEY) || "light"
 );
 
 useEffect(() => {
