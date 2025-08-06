@@ -2,7 +2,6 @@
 
 import { Button } from "./Components/button";
 import { Container } from "./Components/container";
-import { ThemeSwitch } from "./Components/themeSwitch";
 import { ContextProvider, UseTheme } from "./contexts/ThemeContext";
 
 
@@ -22,9 +21,9 @@ const Page = () => {
         </section>
 
         <div>
-          <Button label="Clique aqui" onClick={() => {}}/>  
+          <Button/>  
         </div>
-      <ThemeSwitch/>
+     
       </Container>
     </ContextProvider>
   );

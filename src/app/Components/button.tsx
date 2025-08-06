@@ -1,15 +1,19 @@
 import { UseTheme } from "../contexts/ThemeContext";
 
-type Props = {
-    label: string;
-    onClick: () => void;
-}
 
 
 
-export const Button = ({label, onClick}: Props) => {
+export const Button = () => {
 
     const themeCtx = UseTheme();
+
+     const handleThemeToggle = () => {
+    
+        themeCtx?.setTheme(themeCtx.theme === "dark" ? "light" : "dark");
+  
+
+
+   }
 
     return(
 
@@ -17,8 +21,10 @@ export const Button = ({label, onClick}: Props) => {
                 ${themeCtx?.theme === "dark" ? "bg-white text-black" :
                     "bg-black text-white"
                 }`}
-            onClick={onClick}>
-                {label}
+            onClick={handleThemeToggle}>
+               
+                {themeCtx?.theme === "dark" && "Mudar para Light"}
+                {themeCtx?.theme === "light" && "Mudar para Dark"}
             </button>
 
         
